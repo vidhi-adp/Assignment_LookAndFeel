@@ -3,6 +3,61 @@
 <head>
 	<title>Accidental Drug Deaths</title>
 	<link rel="stylesheet" type="text/css" href="css/temp.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+	body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image{
+  margin: 10px;
+  position: absolute;
+}
+.head-topic{
+  text-align: center;
+  position: relative;
+  font-size: 60px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.myList {
+  font-style: italic;
+}
+.space{
+  margin: 0 20px;
+}
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 10px
+} 
+th {
+  height: 50px;
+  text-align: left;
+}
+</style>
+
 </head>
 <body>
 	<img class="image" src="https://assets1.progressivegrocer.com/files/styles/secondary_articles_short/s3/2018-09/Food%20Recall%20Word%20Cloud%20Teaser_0.jpg?itok=5Wf7nhAp" alt="Drug Image Logo" height="90" width="160">
@@ -10,10 +65,87 @@
 	<div class="navbar">
 		<a href="Home.html">Home</a>
 		<a href="Information.html">Information</a>
-		<a href="Visualization.html">Visualization</a>
+		<a class="current" href="Visualization.html" >Visualization</a>
 		<a href="About.html">About</a>
 	</div>
-	<p>Visualization Data to be inserted</p>
+	<div>
+		
+	</div>
+	<div>
+		
+	</div><div>
+		
+	</div><div>
+		
+	</div><div>
+		
+	</div><div>
+		
+	</div><div>
+		
+	</div>
+	<div>
 	
+	<canvas id="bar-chart-horizontal" width="1600" height="450" backgroundColor="gray"></canvas>
+</div>
+<div>
+	<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:260px">
+  <h3>Class I</h3><br>
+                    <p>Products that might cause a temporary health problem, or pose only a slight threat of a serious nature. Example: a drug that is under-strength but that is not used to treat life-threatening situations.</p>
+  
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:260px">
+  <h3>Class II</h3><br>
+                    <p>Dangerous or defective products that predictably could cause serious health problems or death. Examples include: food found to contain botulinum toxin, food with undeclared allergens, a label mix-up on a lifesaving drug, or a defective artificial heart valve.</p>
+
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:260px">
+  <h3>Class III</h3><br>
+                      <p>Products that are unlikely to cause any adverse health reaction, but that violate FDA labeling or manufacturing laws. Examples include: a minor container defect and lack of English labeling in a retail food.</p>
+
+  </div>
+</div>
+</div>
+		</div>
 </body>
+<script type="text/javascript">
+new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Class I", "Class II", "Class III"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,734]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Product by Class  '
+      }
+    }
+
+});
+</script>
+ <footer id="footer">
+        <div class="container">
+
+            <ul class="copyright">
+                <li>&copy; Group 5</li>
+
+            </ul>
+        </div>
+    </footer>
 </html>
