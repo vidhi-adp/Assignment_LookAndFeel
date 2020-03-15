@@ -46,3 +46,19 @@ th {
   height: 50px;
   text-align: left;
 }
+
+.erTitle{
+  font-weight: bold;
+  text-align: center;
+}
+.erImage{
+  margin: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 50%;*/
+}
+
+.names{
+  font-weight: bold;
+}
